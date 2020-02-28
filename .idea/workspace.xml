@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc5b9a1a-fc35-4ba3-87f4-81f72f6aaba7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/classes.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OOP.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scope.rb" beforeDir="false" afterPath="$PROJECT_DIR$/scope.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +32,25 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Ruby.scope">
+  <component name="RunManager" selected="Ruby.dynamicMethods">
+    <configuration name="dynamicMethods" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="untitled" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/dynamicMethods.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method v="2" />
+    </configuration>
     <configuration name="ex" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="untitled" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
@@ -72,6 +89,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Ruby.dynamicMethods" />
         <item itemvalue="Ruby.scope" />
         <item itemvalue="Ruby.ex" />
       </list>
@@ -89,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582500598966</updated>
       <workItem from="1582500601538" duration="34000" />
-      <workItem from="1582594086440" duration="10532000" />
+      <workItem from="1582594086440" duration="12981000" />
     </task>
     <servers />
   </component>
@@ -97,30 +115,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1558" height="286" key="GridCell.Tab.0.bottom" timestamp="1582679196473">
-      <screen x="1440" y="-517" width="3440" height="1417" />
+    <state width="1398" height="276" key="GridCell.Tab.0.bottom" timestamp="1582919715602">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="1358" height="149" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582655286604" />
+    <state width="1398" height="276" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582919715602" />
     <state width="1558" height="286" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582679196473" />
-    <state width="1558" height="286" key="GridCell.Tab.0.center" timestamp="1582679196471">
-      <screen x="1440" y="-517" width="3440" height="1417" />
+    <state width="1570" height="276" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-517.3440.1368@1440.-517.3440.1368" timestamp="1582852064994" />
+    <state width="1398" height="276" key="GridCell.Tab.0.center" timestamp="1582919715600">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="1358" height="149" key="GridCell.Tab.0.center/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582655286602" />
+    <state width="1398" height="276" key="GridCell.Tab.0.center/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582919715600" />
     <state width="1558" height="286" key="GridCell.Tab.0.center/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582679196471" />
-    <state width="1558" height="286" key="GridCell.Tab.0.left" timestamp="1582679196471">
-      <screen x="1440" y="-517" width="3440" height="1417" />
+    <state width="1570" height="276" key="GridCell.Tab.0.center/0.23.1440.877/1440.-517.3440.1368@1440.-517.3440.1368" timestamp="1582852064993" />
+    <state width="1398" height="276" key="GridCell.Tab.0.left" timestamp="1582919715599">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="1358" height="149" key="GridCell.Tab.0.left/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582655286598" />
+    <state width="1398" height="276" key="GridCell.Tab.0.left/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582919715599" />
     <state width="1558" height="286" key="GridCell.Tab.0.left/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582679196471" />
-    <state width="1558" height="286" key="GridCell.Tab.0.right" timestamp="1582679196472">
-      <screen x="1440" y="-517" width="3440" height="1417" />
+    <state width="1570" height="276" key="GridCell.Tab.0.left/0.23.1440.877/1440.-517.3440.1368@1440.-517.3440.1368" timestamp="1582852064991" />
+    <state width="1398" height="276" key="GridCell.Tab.0.right" timestamp="1582919715601">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="1358" height="149" key="GridCell.Tab.0.right/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582655286603" />
+    <state width="1398" height="276" key="GridCell.Tab.0.right/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582919715601" />
     <state width="1558" height="286" key="GridCell.Tab.0.right/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582679196472" />
-    <state x="1966" y="-190" key="SettingsEditor" timestamp="1582673549910">
-      <screen x="1440" y="-517" width="3440" height="1417" />
+    <state width="1570" height="276" key="GridCell.Tab.0.right/0.23.1440.877/1440.-517.3440.1368@1440.-517.3440.1368" timestamp="1582852064994" />
+    <state x="220" y="129" key="SettingsEditor" timestamp="1582919324162">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state x="220" y="129" key="SettingsEditor/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582638496208" />
+    <state x="220" y="129" key="SettingsEditor/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582919324162" />
     <state x="1966" y="-190" key="SettingsEditor/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582673549910" />
     <state x="1905" y="-195" width="670" height="676" key="search.everywhere.popup" timestamp="1582674443364">
       <screen x="1440" y="-517" width="3440" height="1417" />
@@ -129,6 +151,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/untitled@ex.rcov" NAME="ex Coverage Results" MODIFIED="1582673623454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
-    <SUITE FILE_PATH="coverage/untitled@scope.rcov" NAME="scope Coverage Results" MODIFIED="1582677734974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
+    <SUITE FILE_PATH="coverage/untitled@scope.rcov" NAME="scope Coverage Results" MODIFIED="1582851443429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
+    <SUITE FILE_PATH="coverage/untitled@dynamicMethods.rcov" NAME="dynamicMethods Coverage Results" MODIFIED="1582919598651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
   </component>
 </project>
