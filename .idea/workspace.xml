@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc5b9a1a-fc35-4ba3-87f4-81f72f6aaba7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scope.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scope.rb" beforeDir="false" afterPath="$PROJECT_DIR$/scope.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582500598966</updated>
       <workItem from="1582500601538" duration="34000" />
-      <workItem from="1582594086440" duration="9227000" />
+      <workItem from="1582594086440" duration="10532000" />
     </task>
     <servers />
   </component>
@@ -96,34 +97,38 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1558" height="286" key="GridCell.Tab.0.bottom" timestamp="1582674180809">
+    <state width="1558" height="286" key="GridCell.Tab.0.bottom" timestamp="1582679196473">
       <screen x="1440" y="-517" width="3440" height="1417" />
     </state>
     <state width="1358" height="149" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582655286604" />
-    <state width="1558" height="286" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582674180809" />
-    <state width="1558" height="286" key="GridCell.Tab.0.center" timestamp="1582674180808">
+    <state width="1558" height="286" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582679196473" />
+    <state width="1558" height="286" key="GridCell.Tab.0.center" timestamp="1582679196471">
       <screen x="1440" y="-517" width="3440" height="1417" />
     </state>
     <state width="1358" height="149" key="GridCell.Tab.0.center/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582655286602" />
-    <state width="1558" height="286" key="GridCell.Tab.0.center/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582674180808" />
-    <state width="1558" height="286" key="GridCell.Tab.0.left" timestamp="1582674180807">
+    <state width="1558" height="286" key="GridCell.Tab.0.center/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582679196471" />
+    <state width="1558" height="286" key="GridCell.Tab.0.left" timestamp="1582679196471">
       <screen x="1440" y="-517" width="3440" height="1417" />
     </state>
     <state width="1358" height="149" key="GridCell.Tab.0.left/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582655286598" />
-    <state width="1558" height="286" key="GridCell.Tab.0.left/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582674180807" />
-    <state width="1558" height="286" key="GridCell.Tab.0.right" timestamp="1582674180808">
+    <state width="1558" height="286" key="GridCell.Tab.0.left/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582679196471" />
+    <state width="1558" height="286" key="GridCell.Tab.0.right" timestamp="1582679196472">
       <screen x="1440" y="-517" width="3440" height="1417" />
     </state>
     <state width="1358" height="149" key="GridCell.Tab.0.right/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582655286603" />
-    <state width="1558" height="286" key="GridCell.Tab.0.right/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582674180808" />
+    <state width="1558" height="286" key="GridCell.Tab.0.right/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582679196472" />
     <state x="1966" y="-190" key="SettingsEditor" timestamp="1582673549910">
       <screen x="1440" y="-517" width="3440" height="1417" />
     </state>
     <state x="220" y="129" key="SettingsEditor/0.23.1440.828/1440.-157.1920.1057/-1920.-277.1920.1177@0.23.1440.828" timestamp="1582638496208" />
     <state x="1966" y="-190" key="SettingsEditor/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582673549910" />
+    <state x="1905" y="-195" width="670" height="676" key="search.everywhere.popup" timestamp="1582674443364">
+      <screen x="1440" y="-517" width="3440" height="1417" />
+    </state>
+    <state x="1905" y="-195" width="670" height="676" key="search.everywhere.popup/0.23.1440.828/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1582674443364" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/untitled@ex.rcov" NAME="ex Coverage Results" MODIFIED="1582673623454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
-    <SUITE FILE_PATH="coverage/untitled@scope.rcov" NAME="scope Coverage Results" MODIFIED="1582674103496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
+    <SUITE FILE_PATH="coverage/untitled@scope.rcov" NAME="scope Coverage Results" MODIFIED="1582677734974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
   </component>
 </project>
