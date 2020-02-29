@@ -109,44 +109,77 @@
 #
 
 class Gear
-  attr_reader :chainring, :cog, :rim, :tire
+  attr_reader :chainring, :cog
 
-  def initialize(chainring: default_chainring, cog: 18, wheel:)
+  def initialize(chainring:, cog:)
     @chainring = chainring
     @cog = cog
-    @wheel = wheel
   end
 
-  def gear_inches
-    ratio * wheel.diameter
+  def gear_inches(diameter)
+    ratio * diameter
   end
 
   def ratio
     chainring / cog.to_f
   end
-
-  def wheel
-    @wheel ||= Wheel.new(rim, tire)
-  end
-
-  def default_chainring
-    (100 / 2) - 10
-  end
 end
 
 class Wheel
-  attr_reader :rim, :tire
+  attr_reader :rim, :tire, :gear
 
-  def initialize(rim, tire)
+  def initialize(rim:, tire:, chainring:, cog:)
     @rim = rim
     @tire = tire
+    @gear = Gear.new(chainring: chainring, cog: cog)
   end
 
   def diameter
     rim + (tire * 2)
   end
+
+  def gear_inches
+    gear.gear_inches(diameter)
+  end
 end
 
-puts Gear.new(
-    wheel: Wheel.new(26, 1.5)
-).chainring
+
+
+# module SomeFramework
+#
+#   class Gear
+#     attr_reader :chainring, :cog, :wheel
+#
+#     def initialize(chainring, cog, wheel)
+#       @chainring = chainring
+#       @cog = cog
+#       @wheel = wheel
+#     end
+#   end
+#
+# end
+#
+# module GearWrapper
+#
+#   def self.gear(chainring:, cog:, wheel:)
+#
+#     SomeFramework::Gear.new(chainring, cog, wheel)
+#
+#   end
+#
+# end
+#
+# puts GearWrapper.gear(
+#     chainring: 52,
+#     cog: 11,
+#     wheel: Wheel.new(26, 1.5)
+# ).gear_inches
+#
+#
+
+puts Wheel.new(
+    rim: 26,
+    tire: 1.5,
+    chainring: 52,
+    cog: 11
+).gear_inches
