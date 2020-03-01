@@ -75,6 +75,12 @@ class Bicycle
     @size = opts[:size]
     @chain = opts[:chain] || default_chain
     @tire_size = opts[:tire_size] || default_tire_size
+
+    post_initialize(opts)
+  end
+
+  def post_initialize(opts)
+
   end
 
   def default_chain
@@ -94,7 +100,13 @@ class Bicycle
   def spares
 
     { tire_size: tire_size,
-      chain: chain }
+      chain: chain }.merge(local_spares)
+
+  end
+
+  def local_spares
+
+    {}
 
   end
 
@@ -105,16 +117,15 @@ class RoadBike < Bicycle
 
   attr_reader :tape_color
 
-  def initialize(**opts)
+  def post_initialize(opts)
 
     @tape_color = opts[:tape_color]
-    super
 
   end
 
-  def spares
+  def local_spares
 
-    super.merge(tape_color: tape_color)
+    { tape_color: tape_color }
 
   end
 
@@ -128,11 +139,18 @@ end
 
 class MountainBike < Bicycle
 
-  attr_reader :front_shock
+  attr_reader :front_shock, :rear_shock
 
-  def spares
+  def post_initialize(opts)
 
-    super.merge(front_shock: front_shock)
+    @front_shock = opts[:front_shock]
+    @rear_shock = opts[:rear_shock]
+
+  end
+
+  def local_spares
+
+    { front_shock: front_shock }
 
   end
 
@@ -168,5 +186,62 @@ end
 # puts mountain_bike.chain
 #
 
+road_bike = RoadBike.new(
+    size: 'M',
+    tape_color: 'red'
+)
+
+puts road_bike.tire_size
+puts road_bike.chain
+puts road_bike.spares
+
+
+mountain_bike = MountainBike.new(
+    size: 'S',
+    front_shock: 'Manitou',
+    rear_shock: 'Fox'
+)
+
+puts mountain_bike.tire_size
+puts mountain_bike.chain
+puts mountain_bike.spares
+
+
+class RecumbentBike < Bicycle
+
+  attr_reader :flag
+
+  def post_initialize(opts)
+
+    @flag = opts[:flag]
+
+  end
+
+  def local_spares
+
+    { flag: flag }
+
+  end
+
+  def default_chain
+
+    '10-speed'
+
+  end
+
+  def default_tire_size
+
+    '28'
+
+  end
+
+end
+
+bent = RecumbentBike.new(
+    size: 'M',
+    flag: 'tall and orange'
+)
+
+puts bent.spares
 
 
