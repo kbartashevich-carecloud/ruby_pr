@@ -65,18 +65,77 @@
 #
 # end
 #
+#
 
+module Schedulable
+
+  attr_writer :schedule
+
+  def schedule
+
+    @schedule ||= Schedule.new
+
+  end
+
+  def schedulable?(starting, ending)
+
+    !scheduled?(starting - lead_days, ending)
+
+  end
+
+  def scheduled?(starting, ending)
+
+    schedule.scheduled?(self, starting, ending)
+
+  end
+
+  def lead_days
+
+    0
+
+  end
+
+end
+
+class Schedule
+
+  def scheduled?(schedulable, starting, ending)
+
+    puts "This #{schedulable.class} is " +
+             "available #{starting} - #{ending}"
+
+    false
+
+  end
+
+  def add(target, starting, ending)
+    # ...
+  end
+
+  def remove(target, atrting, ending)
+    # ...
+  end
+
+end
 
 class Bicycle
 
-  attr_reader :size, :chain, :tire_size
+  include Schedulable
+
+  attr_reader :size, :chain, :tire_size, :schedule
 
   def initialize(**opts)
     @size = opts[:size]
     @chain = opts[:chain] || default_chain
     @tire_size = opts[:tire_size] || default_tire_size
+    @schedule = opts[:schedule] || Schedule.new
 
     post_initialize(opts)
+  end
+
+  def lead_days
+    1
+
   end
 
   def post_initialize(opts)
@@ -91,9 +150,7 @@ class Bicycle
 
   def default_tire_size
 
-    raise NotImplementedError,
-
-          "#{self.class} should have implemented..."
+    123
 
   end
 
@@ -186,25 +243,25 @@ end
 # puts mountain_bike.chain
 #
 
-road_bike = RoadBike.new(
-    size: 'M',
-    tape_color: 'red'
-)
-
-puts road_bike.tire_size
-puts road_bike.chain
-puts road_bike.spares
-
-
-mountain_bike = MountainBike.new(
-    size: 'S',
-    front_shock: 'Manitou',
-    rear_shock: 'Fox'
-)
-
-puts mountain_bike.tire_size
-puts mountain_bike.chain
-puts mountain_bike.spares
+# road_bike = RoadBike.new(
+#     size: 'M',
+#     tape_color: 'red'
+# )
+#
+# puts road_bike.tire_size
+# puts road_bike.chain
+# puts road_bike.spares
+#
+#
+# mountain_bike = MountainBike.new(
+#     size: 'S',
+#     front_shock: 'Manitou',
+#     rear_shock: 'Fox'
+# )
+#
+# puts mountain_bike.tire_size
+# puts mountain_bike.chain
+# puts mountain_bike.spares
 
 
 class RecumbentBike < Bicycle
@@ -237,11 +294,19 @@ class RecumbentBike < Bicycle
 
 end
 
-bent = RecumbentBike.new(
-    size: 'M',
-    flag: 'tall and orange'
-)
+# bent = RecumbentBike.new(
+#     size: 'M',
+#     flag: 'tall and orange'
+# )
+#
+# puts bent.spares
 
-puts bent.spares
 
 
+require 'date'
+starting = Date.parse("2019/09/04")
+ending = Date.parse("2019/09/10")
+
+b = Bicycle.new
+
+puts b.schedulable?(starting, ending)
