@@ -1,50 +1,36 @@
 class Parts
 
-  attr_reader :chain, :tire_size
+  attr_reader :parts
 
-  def initialize(**opts)
+  def initialize(parts)
 
-    @chain = opts[:chain] || default_chain
-    @tire_size = opts[:tire_size] || default_tire_size
-
-    post_initialize(opts)
+    @parts = parts
 
   end
 
   def spares
 
-    { chain: chain,
-      tire_size: tire_size }.merge(local_spares)
-
-  end
-
-  def default_tire_size
-
-    raise NotImplementedError
-
-  end
-
-  def post_initialize(opts)
-
-    nil
-
-  end
-
-  def local_spares
-
-    {}
-
-  end
-
-  def default_chain
-
-    "l1-speed"
+    parts.select { |part| part.needs_spare }
 
   end
 
 end
 
-class RoadBike_parts < Parts
+class Part
+
+  attr_reader :name, :description, :needs_spare
+
+  def initialize(name:, description:, needs_spare: true)
+
+    @name = name
+    @description = description
+    @needs_spare = needs_spare
+
+  end
+
+end
+
+class RoadBikeParts < Parts
 
   attr_reader :tape_color
 
@@ -163,22 +149,22 @@ class MountainBike < Bicycle
 end
 
 
-road_bike = RoadBike.new(
+road_bike = Bicycle.new(
     size: 'M',
-    tape_color: 'red')
+    parts: RoadBikeParts.new(tape_color: "red"))
 
-puts road_bike.tire_size
-puts road_bike.chain
+puts road_bike.size
 puts road_bike.spares
 
 
-mountain_bike = MountainBike.new(
-    size: 'S',
-    front_shock: 'Manitou',
-    rear_shock: 'Fox'
+mountain_bike = Bicycle.new(
+    size: 'L',
+    parts: MountainBikeParts.new(
+        front_shock: 'Manitou',
+        rear_shock: "Fox"
+    )
 )
 
-puts mountain_bike.tire_size
-puts mountain_bike.chain
+puts mountain_bike.size
 puts mountain_bike.spares
 
